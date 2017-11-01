@@ -232,6 +232,8 @@ public final class Pays extends Component {
         putIfNotEmpty(payParams, WepayField.GOODS_TAG, request.getGoodsTag());
         putIfNotEmpty(payParams, WepayField.TIME_EXPIRE, request.getTimeExpire());
         putIfNotEmpty(payParams, WepayField.LIMIT_PAY, request.getLimitPay());
+        putIfNotEmpty(payParams, WepayField.USER_CREID, request.getUserCreid());
+        putIfNotEmpty(payParams, WepayField.USER_TRUENAME, request.getUserTruename());
 
         return payParams;
     }

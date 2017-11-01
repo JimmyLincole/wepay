@@ -97,6 +97,20 @@ public class PayRequest implements Serializable {
     @Optional
     private String limitPay;
 
+    /**
+     * 用户身份证号码，指定身份支付，不传则不验证
+     * {@link me.hao0.wepay.model.enums.WepayField#USER_CREID}
+     */
+    @Optional
+    private String userCreid;
+
+    /**
+     * 用户真实姓名，指定身份支付，不传则不验证
+     * {@link me.hao0.wepay.model.enums.WepayField#USER_TRUENAME}
+     */
+    @Optional
+    private String userTruename;
+
     public String getBody() {
         return body;
     }
@@ -201,6 +215,22 @@ public class PayRequest implements Serializable {
         this.limitPay = limitPay;
     }
 
+    public String getUserCreid() {
+        return userCreid;
+    }
+
+    public void setUserCreid(String userCreid) {
+        this.userCreid = userCreid;
+    }
+
+    public String getUserTruename() {
+        return userTruename;
+    }
+
+    public void setUserTruename(String userTruename) {
+        this.userTruename = userTruename;
+    }
+
     @Override
     public String toString() {
         return "PayDetail{" +
@@ -217,6 +247,8 @@ public class PayRequest implements Serializable {
                 ", timeExpire='" + timeExpire + '\'' +
                 ", goodsTag='" + goodsTag + '\'' +
                 ", limitPay='" + limitPay + '\'' +
-                '}';
+                ", userCreid='" + userCreid + '\'' +
+                ", userTruename='" + userTruename + '\'' +
+               '}';
     }
 }

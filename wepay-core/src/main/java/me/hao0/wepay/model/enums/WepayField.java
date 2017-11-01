@@ -175,6 +175,18 @@ public final class WepayField {
     public static final String LIMIT_PAY = "limit_pay";
 
     /**
+     * 用户身份证号码，指定身份支付，不传则不验证
+     */
+    @Optional
+    public static final String USER_CREID = "user_creid";
+
+    /**
+     * 用户真实姓名，指定身份支付，不传则不验证
+     */
+    @Optional
+    public static final String USER_TRUENAME = "user_truename";
+
+    /**
      * 用户标识
      * trade_type=JSAPI，此参数必传，用户在商户appid下的唯一标识
      */
